@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/Styles/accordion.css" />
+    <link rel="stylesheet" href="/Styles/styles.css" />
+    <script src="accordion.js"></script>
+    <title>Accordion</title>
+  </head>
+  <body>
+    <div id="my-accordion"><h1>Accordion By Million</h1></div>
+  </body>
+  <script type="text/javascript">
+    var options = {
+      container: 'my-accordion',
+      mainTitle: 'Main Accordion Title',
+      panels: [
+        {
+          title: 'Profile',
+          subtitle: 'My profile information',
+          content: `<p>
+      lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum assumenda amet placeat, non quasi, fuga eveniet amet fugit et porro perspiciatis, deleniti ad qui quos numquam ratione iusto? Sequi, culpa.Accusantium at neque explicabo tempore ipsum omnis consequuntur expedita, illum laborum? Fugiat nesciunt vitae est mollitia nisi dolore minus voluptatum similique debitis vel fugit, magni doloremque, iusto deserunt quo natus.
+      </p>`
+        },
+
+        {
+          title: 'Quote',
+          subtitle: 'My favourite qoute',
+          content: `<blockquote >
+    <p>The mirror is my best friend because when I cry it never laughs.</p>
+    <footer>—Charlie Chaplin, <cite>Brave New World</cite></footer>
+</blockquote>`
+        },
+        {
+          title: 'Courses',
+          subtitle: 'Where and what i have studied',
+          content: `<dl>
+    <dt>Eritrean Institute Of Technology </dt>
+    <dd>Department of computer science.</dd>
+
+    <dt>Code Your Future</dt>
+    <dd>Junior Full Stack Developer</dd>
+
+    <dt>VUB</dt>
+    <dd>Translator During Intake Interviews For Assylum Seekers.</dd>
+</dl>`
+        },
+        {
+          title: 'My Background',
+          subtitle: '',
+          content: `<p>
+      My name is million Yowhannes .,,,,,,,,,lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum assumenda amet placeat, non quasi, fuga eveniet fugit et porro perspiciatis, deleniti ad qui quos numquam ratione iusto? Sequi, culpa.Accusantium at neque explicabo tempore ipsum omnis consequuntur expedita, illum laborum? Fugiat nesciunt vitae est mollitia nisi dolore minus voluptatum similique debitis vel fugit, magni doloremque, iusto deserunt quo natus.
+      </p>`
+        }
+      ]
+    };
+    var accordion = new Accordion(options);
+  </script>
+</html>

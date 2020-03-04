@@ -1,0 +1,85 @@
+#my-accordion {
+  position: relative;
+  margin: 45px 35px;
+  background-color: #999;
+  padding: 35px;
+  justify-items: center;
+}
+
+#my-accordion h1 {
+  color: #0465ac;
+  text-align: center;
+}
+
+#my-accordion .Headsection {
+  background-color: #fff;
+  height: 53px;
+  padding: 13px 25px;
+}
+
+#my-accordion .Headsection h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+
+#my-accordion .section {
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 11fr 1fr;
+      grid-template-columns: 11fr 1fr;
+  padding-left: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#my-accordion .section .title-subtitle h3 {
+  color: #0465ac;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 0;
+  margin: 12px 0px;
+}
+
+#my-accordion .section .title-subtitle h4 {
+  color: #999;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 12px 0px;
+}
+
+#my-accordion .section .material-icons {
+  color: #0465ac;
+  margin: 0 25px;
+  cursor: pointer;
+  display: block;
+}
+
+#my-accordion .section .content {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 400;
+  font-size: 13px;
+  max-height: 0;
+  overflow: hidden;
+  padding-right: 25px;
+  -webkit-transition: max-height 1.2s ease-out;
+  transition: max-height 1.2s ease-out;
+  -ms-grid-column-span: 2;
+      grid-column-end: span 2;
+}
+
+@media (max-width: 840px) {
+  #my-accordion .section {
+    -ms-grid-columns: 7fr 1fr;
+        grid-template-columns: 7fr 1fr;
+  }
+}
+
+#my-accordion hr {
+  margin: 0;
+}
+/*# sourceMappingURL=accordion.css.map */

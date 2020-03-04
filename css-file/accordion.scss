@@ -1,0 +1,109 @@
+//our variables for colors
+$colors: (
+  mainTitle-color: #333,
+  titleColor: #0465ac,
+  subtitleColor: #999,
+  accordionSectionBg: #fff
+);
+
+//our variables for font-size
+$fontSize: (
+  MainTitle: 18px,
+  Title: 14px,
+  Subtitle: 12px,
+  Content: 13px
+);
+
+//media query
+@mixin mobile {
+  @media (max-width: 840px) {
+    @content;
+  }
+}
+
+//function for getting colors from the collection listed on top
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+//function for getting font size from the collection listed on $fontSize variable
+@function fontSize($color-name) {
+  @return map-get($fontSize, $color-name);
+}
+
+#my-accordion {
+  position: relative;
+  margin: 45px 35px;
+  background-color: color(subtitleColor);
+  padding: 35px;
+  justify-items: center;
+
+  h1 {
+    color: color(titleColor);
+    text-align: center;
+  }
+
+  .Headsection {
+    background-color: color(accordionSectionBg);
+    height: 53px;
+    padding: 13px 25px;
+
+    h2 {
+      font-size: fontSize(MainTitle);
+      font-weight: 400;
+      color: color(mainTitle-color);
+    }
+  }
+
+  .section {
+    background-color: color(accordionSectionBg);
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    padding-left: 25px;
+    align-items: center;
+
+    .title-subtitle {
+      h3 {
+        color: color(titleColor);
+        font-size: fontSize(Title);
+        font-weight: 600;
+        padding-bottom: 0;
+        margin: 12px 0px;
+      }
+
+      h4 {
+        color: color(subtitleColor);
+        font-size: fontSize(Subtitle);
+        font-weight: 600;
+        margin: 12px 0px;
+      }
+    }
+
+    .material-icons {
+      color: color(titleColor);
+      margin: 0 25px;
+      cursor: pointer;
+      display: block;
+    }
+
+    .content {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: color(mainTitle-color);
+      font-weight: 400;
+      font-size: fontSize(Content);
+      max-height: 0;
+      overflow: hidden;
+      padding-right: 25px;
+      transition: max-height 1.2s ease-out;
+      grid-column-end: span 2;
+    }
+
+    @include mobile {
+      grid-template-columns: 7fr 1fr;
+    }
+  }
+  hr {
+    margin: 0;
+  }
+}
